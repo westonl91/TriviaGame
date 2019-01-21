@@ -1,3 +1,5 @@
+
+
 body {
     text-align: center;
 }
@@ -8,7 +10,7 @@ body::after {
     position: absolute;
     z-index: -1;   
     width: 100%;
-    height: 180%;
+    height: 130%;
     background-image: url(../images/intro_qm.jpg);
     background-size: unset;
     opacity: 0.3;
