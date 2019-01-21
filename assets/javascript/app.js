@@ -19,6 +19,10 @@ $(document).ready(function () {
         event.preventDefault();
         console.log("HERE");
     });
+
+    $('#try_again').click(function() {
+        location.reload();
+    });
 });
 
 
