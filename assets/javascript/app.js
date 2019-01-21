@@ -8,8 +8,12 @@ var intervalID;
 
 
 $(document).ready(function () {
-    intervalID = setInterval(timer, 1000);
-    time_left = parseInt($("#timer").text());
+    $("#ready").on('click', function () {
+        intervalID = setInterval(timer, 1000);
+        time_left = parseInt($("#timer").text());
+        $("#start").css("visibility", "hidden");
+        $("#questions").css("visibility", "visible");
+    });
 
     $("#quiz").on('submit', function (event) {
         event.preventDefault();
@@ -30,8 +34,11 @@ function timer() {
 function stop() {
     clearInterval(intervalID);
     get_score();
-    $("#answers").css("z-index", "1");
-    $("#answers").css("opacity", "1");
+    $("#answers").css("visibility", "visible");
+    $("#questions").css("visibility", "hidden");
+    correct = 0;
+    wrong = 0;
+    unanswered = 0;
 }
 
 function get_score() {

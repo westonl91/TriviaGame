@@ -22,20 +22,19 @@ body::after {
     background-color: white;
     width: 70%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 15%;
 }
 
 #answers {
-    z-index: -2;
     width: 70%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     background-color: rgb(46,56,154);
     color: aliceblue;
-    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 15%;
 }
 
 #top {
@@ -45,4 +44,13 @@ body::after {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+#start {
+    background-color: rgb(46,56,154);
+    color: aliceblue;
+    visibility: visible;
+    position: absolute;
+    left: 15%;
+    width: 70%;
 }
